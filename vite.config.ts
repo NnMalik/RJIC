@@ -4,6 +4,7 @@
   import path from 'path';
 
   export default defineConfig({
+    base: '/RJIC/', // Set base path for GitHub Pages deployment
     plugins: [react()],
     resolve: {
       extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
