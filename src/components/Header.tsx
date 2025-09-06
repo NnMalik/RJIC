@@ -1,4 +1,5 @@
 import { Button } from "./ui/button";
+import logo from '../assets/logo.jpg';
 
 interface HeaderProps {
   activeSection: string;
@@ -11,7 +12,8 @@ export function Header({ activeSection, onSectionChange }: HeaderProps) {
     { id: 'about', label: 'About' },
     { id: 'toppers', label: 'Toppers' },
     { id: 'facilities', label: 'Facilities' },
-    { id: 'achievers', label: 'Proud Achievers' }
+    { id: 'achievers', label: 'Proud Achievers' },
+    { id: 'news', label: 'News' }
   ];
 
   return (
@@ -19,9 +21,10 @@ export function Header({ activeSection, onSectionChange }: HeaderProps) {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           <div className="flex items-center">
+            <img src={logo} alt="College Logo" className="h-12 w-12 mr-3 rounded-full border border-gray-300 bg-white object-contain" />
             <h1 className="text-xl font-semibold text-primary">Rajkumar Janta Inter College</h1>
           </div>
-          
+
           <nav className="hidden md:flex items-center space-x-1">
             {sections.map((section) => (
               <Button

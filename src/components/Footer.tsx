@@ -33,10 +33,10 @@ export function Footer() {
           <div>
             <h4 className="mb-4">Contact Info</h4>
             <div className="space-y-2 text-sm opacity-90">
-              <p>📍 123 Education Street, Knowledge City</p>
+              <p>📍 Faloda, Block Purkaji, District Muzaffarnagar 251307</p>
               <p>📞 +91 12345 67890</p>
-              <p>✉️ info@excellencecollege.edu</p>
-              <p>🌐 www.excellencecollege.edu</p>
+              <p>✉️ rajkumarjantaintercollege@gmail.com</p>
+              <p>🌐 https://rjic.ac.in</p>
             </div>
           </div>
         </div>

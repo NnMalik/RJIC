@@ -83,8 +83,12 @@ export function ToppersSection() {
             <Card key={index} className="hover:shadow-lg transition-shadow">
               <CardContent className="p-6">
                 <div className="text-center mb-4">
-                  <div className="w-20 h-20 bg-gradient-to-br from-primary to-primary/70 rounded-full mx-auto mb-4 flex items-center justify-center text-white">
-                    <span className="text-xl">{topper.name.split(' ').map(n => n[0]).join('')}</span>
+                  <div className="mb-4">
+                    <ImageWithFallback
+                      src="https://images.unsplash.com/photo-1660795468951-0b37051eb1b2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzdHVkZW50JTIwdG9wcGVyJTIwYWNoaWV2ZW1lbnR8ZW58MXx8fHwxNzU3MTM1OTE3fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                      alt={topper.name}
+                      className="w-20 h-20 rounded-full mx-auto object-cover"
+                    />
                   </div>
                   <h3 className="text-xl mb-2">{topper.name}</h3>
                   <Badge variant="secondary" className="mb-2">{topper.achievement}</Badge>

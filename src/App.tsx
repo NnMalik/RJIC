@@ -6,6 +6,7 @@ import { AboutSection } from './components/sections/AboutSection';
 import { ToppersSection } from './components/sections/ToppersSection';
 import { FacilitiesSection } from './components/sections/FacilitiesSection';
 import { ProudAchieversSection } from './components/sections/ProudAchieversSection';
+import { NewsCuttingsSection } from './components/sections/NewsCuttingsSection';
 
 export default function App() {
   const [activeSection, setActiveSection] = useState('home');
@@ -22,6 +23,8 @@ export default function App() {
         return <FacilitiesSection />;
       case 'achievers':
         return <ProudAchieversSection />;
+      case 'news':
+        return <NewsCuttingsSection />;
       default:
         return <HomeSection />;
     }

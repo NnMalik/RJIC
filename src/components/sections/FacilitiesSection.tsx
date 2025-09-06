@@ -1,25 +1,49 @@
 import { ImageWithFallback } from "../figma/ImageWithFallback";
+import computerLabImg from "../../assets/computer_lab.jpeg";
+import chemistryLabImg from "../../assets/chem_lab.jpeg";
+import physicsLabImg from "../../assets/physics_lab.jpeg";
+import smartClassImg from "../../assets/smart_class.jpeg";  
+import libraryImg from "../../assets/library.jpeg";
+import sportsComplexImg from "../../assets/sports.jpeg";
 import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
 
 export function FacilitiesSection() {
   const facilities = [
     {
-      title: "Modern Library",
-      image: "https://images.unsplash.com/photo-1674653760708-f521366e5cde?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBsaWJyYXJ5JTIwaW50ZXJpb3J8ZW58MXx8fHwxNzU3MDUyNzA5fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-      description: "Well-stocked library with over 5,000 books, reference materials, and study spaces for students.",
-      features: ["Textbooks & References", "Study Hall", "Newspapers & Magazines", "Exam Preparation Material"]
+      title: "Physics Laboratory",
+      image: physicsLabImg,
+      description: "Well-equipped physics laboratory with modern instruments for practical sessions and experiments.",
+      features: ["Optical Instruments", "Electrical Equipment", "Mechanical Apparatus", "Safety Measures"]
     },
     {
-      title: "Advanced Laboratories",
-      image: "https://images.unsplash.com/photo-1582273953509-3972288b909e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzY2llbmNlJTIwbGFib3JhdG9yeSUyMGVxdWlwbWVudHxlbnwxfHx8fDE3NTcwODExMjl8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-      description: "Well-equipped science laboratories for Physics, Chemistry, and Biology practical sessions.",
-      features: ["Physics Lab Equipment", "Chemistry Lab Setup", "Biology Specimens", "Safety Equipment"]
+      title: "Chemistry Laboratory",
+      image: chemistryLabImg,
+      description: "Advanced chemistry lab with complete setup for organic, inorganic and physical chemistry experiments.",
+      features: ["Quality Chemicals", "Lab Glassware", "Fume Hoods", "Emergency Equipment"]
     },
     {
-      title: "Sports Complex",
-      image: "https://images.unsplash.com/photo-1754878206374-f78eac63ff29?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb2xsZWdlJTIwc3BvcnRzJTIwZmFjaWxpdGllc3xlbnwxfHx8fDE3NTcwODExMzB8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-      description: "Sports facilities promoting physical fitness and healthy competition among students.",
-      features: ["Playground", "Indoor Games", "Sports Equipment", "Annual Sports Meet"]
+      title: "Computer Laboratory",
+      image: computerLabImg,
+      description: "Modern computer lab with latest systems and software for computer science and practical learning.",
+      features: ["Latest Computers", "High-Speed Internet", "Programming Software", "Technical Support"]
+    },
+    {
+      title: "Smart Classrooms",
+      image: smartClassImg,
+      description: "Interactive smart classrooms equipped with projectors and digital teaching aids for enhanced learning.",
+      features: ["Smart Boards", "Projectors", "Audio Systems", "Digital Content"]
+    },
+    {
+      title: "Library & Reading Hall",
+      image: libraryImg,
+      description: "Comprehensive library with extensive collection of books, journals and reference materials.",
+      features: ["Subject Books", "Reference Section", "Reading Area", "Exam Materials"]
+    },
+    {
+      title: "Sports Facilities",
+      image: sportsComplexImg,
+      description: "Well-maintained sports facilities for various outdoor and indoor games to promote physical fitness.",
+      features: ["Playground", "Indoor Games", "Sports Equipment", "Annual Tournaments"]
     }
   ];
 
@@ -72,7 +96,7 @@ export function FacilitiesSection() {
         <div className="text-center mb-12">
           <h1 className="text-4xl md:text-5xl mb-6">World-Class Facilities</h1>
           <p className="text-xl max-w-3xl mx-auto">
-            Our campus is designed to provide students with the best possible environment 
+            Our campus is designed to provide students with the best possible environment
             for learning, research, and personal development.
           </p>
         </div>
@@ -80,11 +104,10 @@ export function FacilitiesSection() {
         {/* Main Facilities */}
         <div className="space-y-16 mb-16">
           {facilities.map((facility, index) => (
-            <div 
-              key={index} 
-              className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${
-                index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''
-              }`}
+            <div
+              key={index}
+              className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''
+                }`}
             >
               <div className={index % 2 === 1 ? 'lg:col-start-2' : ''}>
                 <h2 className="text-3xl mb-4">{facility.title}</h2>

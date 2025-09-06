@@ -1,56 +1,98 @@
 import { ImageWithFallback } from "../figma/ImageWithFallback";
 import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
-import { Badge } from "../ui/badge";
+import PKT from '../../assets/PKT.jpeg';
+import KT from '../../assets/KT.jpeg';
+import DrAK from '../../assets/DrAK.jpeg';
+import DrAnuj from '../../assets/DrAnuj.jpeg';
+import DrVT from '../../assets/DrVT.jpeg';
+import KS from '../../assets/KS.jpeg';
+import ST from '../../assets/ST.jpeg';
+import AshishT from '../../assets/AshishT.jpeg';
+import ATF from '../../assets/ATF.jpeg';
+import BK from '../../assets/BK.jpeg';
+import AT from '../../assets/AT.jpeg';
+import DrAT from '../../assets/DrAT.jpeg';
+import STAGM from '../../assets/STAGM.jpeg';
 
 export function ProudAchieversSection() {
   const achievers = [
     {
-      name: "Dr. Rajesh Kumar",
-      batch: "Batch of 2018",
-      achievement: "MBBS Graduate & Practicing Doctor",
-      description: "Cleared NEET from our college, completed MBBS from KGMU and now serving at district hospital.",
-      college: "KGMU Lucknow",
-      field: "Medical"
+      name: "Parveen Kumar Tyagi",
+      achievement: "Director & Founder",
+      description: "2i Solutions, a leading IT services company.(CANADA)",
+      image: PKT,
     },
     {
-      name: "Priya Sharma",
-      batch: "Batch of 2019", 
-      achievement: "Software Engineer at Infosys",
-      description: "Completed B.Tech in Computer Science from NIT and working at leading IT company.",
-      college: "NIT Allahabad",
-      field: "Engineering"
+      name: "Kapil Tyagi",
+      achievement: "Director",
+      description: "Niwan times (INDIA)",
+      image: KT,
     },
     {
-      name: "Arjun Singh",
-      batch: "Batch of 2020",
-      achievement: "CA Finalist & Banking Professional",
-      description: "Pursuing CA while working at State Bank of India as Probationary Officer.",
-      college: "Delhi University",
-      field: "Commerce & Finance"
+      name: "Kuldeep Sharma",
+      achievement: "Software Architect",
+      description: "Accenture services pvt ltd. Gurgaon haryana (INDIA)",
+      image: KS,
     },
     {
-      name: "Sneha Gupta",
-      batch: "Batch of 2017",
-      achievement: "Civil Services Officer (IAS)",
-      description: "Cleared UPSC examination and currently serving as Assistant Collector in administration.",
-      college: "JNU Delhi",
-      field: "Civil Services"
+      name: "Amit Tyagi",
+      achievement: "Technical Lead",
+      description: "Netwest Group",
+      image: AT,
     },
     {
-      name: "Amit Verma",
-      batch: "Batch of 2021",
-      achievement: "Research Scholar at IIT Delhi",
-      description: "Pursuing PhD in Biotechnology after completing M.Sc. from prestigious institution.",
-      college: "IIT Delhi",
-      field: "Research & Development"
+      name: "Dr Anurag Tyagi",
+      achievement: "Medical Superintendent",
+      description: "Department of Medical Health and Family Welfare, Govt. of Uttar Pradesh",
+      image: DrAT,
     },
     {
-      name: "Kavita Singh",
-      batch: "Batch of 2016",
-      achievement: "Teacher & Education Leader",
-      description: "Completed B.Ed and M.Ed, now serving as Principal at government school.",
-      college: "BHU Varanasi",
-      field: "Education"
+      name: "Ashish Tyagi",
+      achievement: "Lead Software Engineer",
+      description: "Cognizant Technology Solutions Pvt Ltd",
+      image: AshishT,
+    },
+    {
+      name: "Sachin Tyagi",
+      achievement: "AGM-HR",
+      description: "Vatika Group of Institutions, Gurgaon",
+      image: ST,
+    },
+    {
+      name: "Dr Amit Kumar",
+      achievement: "(Ph.D, FIAES) Scientist",
+      description: "Joint Director, Ministry of Textile, Government of India",
+      image: DrAK,
+    },
+    {
+      name: "Dr Anuj Tyagi",
+      achievement: "Associate Professor & HOD",
+      description: "Rani Lakshmi Bai Central Agricultural University, Jhansi",
+      image: DrAnuj,
+    },
+    {
+      name: "Dr Vivek Tyagi",
+      achievement: "MBBS, MD(Anaesthesiology)",
+      description: "LLRM Medical College, Meerut",
+      image: DrVT,
+    },
+    {
+      name: "Babil Kumar",
+      achievement: "Station Superintendent",
+      description: "Indian Railways",
+      image: BK,
+    },
+    {
+      name: "Abhishek Tyagi",
+      achievement: "Principal Architect",
+      description: "Flipkart India Pvt Ltd",
+      image: ATF,
+    },
+    {
+      name: "Sharvan Tyagi",
+      achievement: "AGM",
+      description: "Plastic Omnium Auto Industries",
+      image: STAGM,
     }
   ];
 
@@ -72,12 +114,12 @@ export function ProudAchieversSection() {
     },
     {
       category: "Continuing Legacy", 
-      count: "15+",
+      count: "54+",
       description: "Years of student success"
     }
   ];
 
-  return (
+ return (
     <div className="min-h-screen py-16">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
@@ -119,32 +161,18 @@ export function ProudAchieversSection() {
           <h2 className="text-3xl text-center mb-12">Notable Alumni</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {achievers.map((achiever, index) => (
-              <Card key={index} className="hover:shadow-lg transition-shadow">
-                <CardHeader>
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="w-16 h-16 bg-gradient-to-br from-primary to-primary/70 rounded-full flex items-center justify-center text-white">
-                      <span className="text-lg">{achiever.name.split(' ').map(n => n[0]).join('')}</span>
-                    </div>
-                    <Badge variant="outline">{achiever.batch}</Badge>
-                  </div>
-                  <CardTitle className="text-lg">{achiever.name}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <h4 className="mb-3 text-primary">{achiever.achievement}</h4>
-                  <p className="text-sm text-muted-foreground mb-4">
-                    {achiever.description}
-                  </p>
-                  <div className="space-y-2 text-sm">
-                    <div className="flex justify-between">
-                      <span>College:</span>
-                      <span className="font-medium">{achiever.college}</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span>Field:</span>
-                      <span className="font-medium">{achiever.field}</span>
-                    </div>
-                  </div>
-                </CardContent>
+              <Card key={index} className="hover:shadow-lg transition-shadow flex flex-col items-center p-4">
+                <ImageWithFallback
+                  src={achiever.image || "https://images.unsplash.com/photo-1660795468951-0b37051eb1b2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzdHVkZW50JTIwdG9wcGVyJTIwYWNoaWV2ZW1lbnR8ZW58MXx8fHwxNzU3MTM1OTE3fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"}
+                  alt={achiever.name}
+                  className="w-20 h-20 min-w-20 min-h-20 max-w-20 max-h-20 rounded-full object-cover border-2 border-primary bg-white mb-3 mx-auto"
+                  style={{ aspectRatio: '1 / 1' }}
+                />
+                <CardTitle className="text-base text-center mb-1">{achiever.name}</CardTitle>
+                <h4 className="mb-2 text-primary text-center font-semibold text-sm">{achiever.achievement}</h4>
+                <p className="text-xs text-muted-foreground text-center">
+                  {achiever.description}
+                </p>
               </Card>
             ))}
           </div>
